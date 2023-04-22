@@ -1,0 +1,155 @@
+/* FORMULARIO LOGIN/REGISTRO - INDEX*/
+:root {
+  --blueH: #00358e;
+  --green: hsl(162, 45%, 56%);
+  --lead: hsl(162, 2%, 56%);
+  --blue: hsl(220, 85%, 57%);
+  --violet: hsl(272, 92%, 32%);
+  --text-white: hsl(0, 0%, 100%);
+  --text-light-gray: hsl(0, 0%, 90%);
+  --body-bg-color: hsl(200, 54%, 12%);
+  --glass-bg-color: hsla(0, 0%, 100%, 0.05);
+  --boder-color: hsla(0, 0%, 100%, 0.25);
+  --blur: blur(10px);
+  --button-hover-color: hsla(0, 0%, 0%, 0.3);
+}
+body {
+  margin: 0;
+  background-color:antiquewhite;
+  color:coral;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.form-main {
+  min-height: 100vh;
+  padding: 60px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-content {
+  width: 100%;
+  max-width: 450px;
+  position: relative;
+  z-index: 1;
+}
+
+.form-content .box {
+  border-color: black;
+  border: 1px solid goldenrod;
+  padding: 40px 50px;
+  border-radius: 20px;
+  backdrop-filter: var(--blur);
+}
+
+.form-content h3 {
+  font-size: 28px;
+  text-align: center;
+  line-height: 1, 2;
+  color:darkgoldenrod;
+  font-weight: 500;
+}
+
+.form-content form {
+  margin: 25px 0 20px;
+}
+
+.form-content .input-box {
+  margin: 25px;
+}
+
+.form-content .input-control {
+  display: block;
+  height: 45px;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--boder-color);
+  color: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+.form-content .input-control:focus {
+  outline: none;
+}
+
+.form-content .input-link {
+  margin-top: 10px;
+  text-align: right;
+}
+
+.form-content .btn {
+  height: 45px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+  font-family: inherit;
+  cursor: pointer;
+  border-radius: 25px;
+  user-select: none;
+  background-color:goldenrod;
+  border: none;
+  color: var(--text-light-gray);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.form-content .btn::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  transition:  0.5s ease;
+  z-index: -1;
+}
+
+.form-content .btn:hover::before {
+  background-color: var(--button-hover-color);
+}
+
+.form-content p {
+  text-align: center;
+}
+
+.form-content ::placeholder {
+  color: inherit;
+  opacity: 1;
+}
+
+.gradient-text {
+  background-color:goldenrod;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.index{
+  display: inline;
+}
+.btn-index{
+  height: 45px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+  font-family: inherit;
+  cursor: pointer;
+  border-radius: 25px;
+  user-select: none;
+  background-color: goldenrod;
+  border: none;
+  color: var(--text-white);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  margin-top: 25px;
+}
