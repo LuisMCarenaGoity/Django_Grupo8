@@ -8,24 +8,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/disenioindex.css">
-    <link rel="stylesheet" href="./css/mediaquerysindex.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <link rel="icon" href="./icons/Logo_hotel_porteño.ico">
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/publica/css/index.css'%}?v={% now 'U' %}">
+    <link rel="stylesheet" href="{% static '/publica/css/css.css'%}">
+    
+    <link rel="icon" href="{% static '/icons/logopeq.ico'%}">
     <title>Home</title>
 </head>
 
 <body>
-    <div>
-        <p>{{titulo}} </p>
-        <p>{{param1}} </p>
-        <p>{{hoy}} </p>
-    </div>
     
     <div class="banner">
         
             <nav class="navbar">
-                <a href="index.html" class="logo"><img src="./icons/Logo_hotel_porteño.png" class="logo" alt="logo de hotel"></a>
+                <a href="index.html" class="logo"><img src="{% static '/icons/Logo_hotel.png'%}" class="logo" alt="logo de hotel"></a>
                 <ul class="menu" id="menu">
                     <li><a href="Reservas.html">Reservas</a></li>
                     <li><a href="servicios.html">Servicios</a></li>
@@ -63,7 +60,7 @@
         <Section class="Contenidopagina">
             <div class="contenedor-imagenes">
                 <article class="images-content1">
-                    <img src="./icons/imagen_hotel_1.jpg" class="imagen" alt="imagen 1">
+                    <img src="{% static '/icons/imagen_hotel_1.jpg'%}" class="imagen" alt="imagen 1">
                     <div class="texto1">
                         <h2 class="h2imagen">Habitaciones</h2>
                         <br>
@@ -72,7 +69,7 @@
                     </div>
                 </article>
                 <article class="images-content2">
-                    <img src="./icons/imagen_hotel_2.jpg" class="imagen" alt="imagen 2">
+                    <img src="{% static '/icons/imagen_hotel_2.jpg'%}" class="imagen" alt="imagen 2">
                     <div class="texto1">
                         <h2 class="h2imagen">Servicios</h2>
                         <br>
@@ -95,19 +92,19 @@
                 <p class="Textocomidas">Por supuesto antes de ir a la playa no puede dejar de probar nuestro exquisito y variado desayuno buffet. Donde no solo encontrará una de las medialunas mas ricas de Mar del Plata, según nuestros huéspedes, sino que encontrará variedad de tartas, frutas, fiambres, facturas, panes, y un elegante cheff preparándole los mejores omelettes.</p>
                 <ul class="slider">
                 <li id="slide1">
-                    <img src="./images/image.png" alt="Imagen Desayuno"/>
+                    <img src="{% static '/img/image.png'%}" alt="Imagen Desayuno"/>
                 </li>
                 <li id="slide2">
-                    <img src="./images/almuerzohotel.jpg" alt="Imagen almuerzo"/>
+                    <img src="{% static '/img/almuerzohotel.jpg'%}" alt="Imagen almuerzo"/>
                 </li>
                 <li id="slide3">
-                    <img src="./images/meriendashotel.jpg" alt="Imagen Merienda">
+                    <img src="{% static '/img/meriendashotel.jpg'%}" alt="Imagen Merienda">
                 </li>
                 <li id="slide4">
-                    <img src="./images/CarneHotel.png" alt="Imagen Cena">
+                    <img src="{% static '/img/CarneHotel.png'%}" alt="Imagen Cena">
                 </li>
                 <li id="slide5">
-                    <img src="./images/vinosdelujo.jpg" alt="Imagen Vinos">
+                    <img src="{% static '/img/vinosdelujo.jpg'%}" alt="Imagen Vinos">
                 </li>
                 
                 </ul>
@@ -157,7 +154,7 @@
 
     </div>
 
-    <script src="./jss/scripts.js"></script>
+    <script src="{% static './jss/scripts.js'%}"></script>
 </body>
 
 </html>
