@@ -1,55 +1,26 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contactanos</title>
-    <link rel="stylesheet" href="./css/contacto.css">
-    <link rel="stylesheet" href="./css/disenioindex.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <link rel="stylesheet" href="./css/servicios.css">
-    <link rel="icon" href="./icons/Logo_hotel_porteño.ico">
-    <script src="https://kit.fontawesome.com/b87ec063d4.js" crossorigin="anonymous"></script>
-</head>
-
-<body>
-    <div class="banner">
-        <header>
-            <nav class="navbar">
-                <a href="index.html" class="logo"><img src="./icons/Logo_hotel_porteño.png" class="logo" alt="logo del hotel"></a>
-                <ul class="menu" id="menu">
-                    <li><a href="Reservas.html">Reservas</a></li>
-                    <li><a href="servicios.html">Servicios</a></li>
-                    <li><a href="nosotros.html">Nosotros</a></li>
-                    <li><a href="Fotos.html">Galeria</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                </ul>
-                <div class="menu-bar" id="menu-bar">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
-                <div class="user-icon">
-                    <a href="login.html"><i class="fa-solid fa-user"></i></a>                </div>
-
-            </nav>
-        </header>
-
-    <div class="contenedor2">
+{% extends './base.html' %}
+{% load static %}
+{% block titulo %}Contacto{% endblock  %}
+{% block css %}
+<link rel="stylesheet"  href="{% static '/publica/css/contacto.css'%}">
+{% endblock css %}
+    {% block contenido %}
+      <div class="contenedor2">
         <div class="form">
             <div class="contacto-info">
                 <h3 class="titulo">Ponete en contacto con nosotros</h3>
                 
                 <div class="info">
                     <div class="informacion">
-                        <img src= "./icons/mapa.png" class="icon" alt="icono de locacion" />
+                        <img src= "{% static '/icons/mapa.png'%}" class="icon" alt="icono de locacion" />
                         <p>Buenos Aires, Argentina</p>
                     </div>
                     <div class="informacion">
-                        <img src="./icons/mail.png" class="icon" alt="icono de un email" />
+                        <img src="{% static '/icons/mail.png'%}" class="icon" alt="icono de un email" />
                         <p>hotelesporteños@gmail.com</p>
                     </div>
                     <div class="informacion">
-                        <img src="./icons/tel.png" class="icon" alt="icono de un telefono" />
+                        <img src="{% static '/icons/tel.png'%}" class="icon" alt="icono de un telefono" />
                         <p>5555-5555</p>
                     </div>
                 </div>
@@ -67,12 +38,12 @@
                             <i class="fab fa-instagram"></i>
                         </a>
                         <a href="#">
-                            <i class="fa-brands fa-whatsapp""></i>
+                            <i class="fa-brands fa-whatsapp"></i>
                         </a>
                     </div>
+                
                 </div>
-            </div>
-
+            </div>    
             <div class="contacto-form">
 
                 <form action="contacto.html" autocomplete="off">
@@ -102,22 +73,9 @@
             </div>
         </div>
     </div>
+    {% endblock contenido %}
+    {% block js %} <script src="{% static '/jss/contacto.jss'%}"></script>{% endblock js %}  
+      
 
-    <script src="./jss/contacto.js"></script>
-    <footer>
-        <div class="redes">
-          <p>Seguinos en nuestras Redes Sociales</p>
-          <div class="contenedor-iconos">
-            <ul>
-              <li><a href="#"><i class="fa-brands fa-square-instagram"></i></a></li>
-              <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
-              <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-            </ul>
-          </div>
-          <p>@Copyright 2022. Todos los derechos reservados</p>
-        </div>
-      </footer>
-</body>
-
-</html>
+    
+   

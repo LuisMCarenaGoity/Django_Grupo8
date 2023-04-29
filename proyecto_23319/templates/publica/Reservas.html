@@ -6,12 +6,10 @@
 <link rel="stylesheet"  href="{% static '/publica/css/main.css'%}">
 
 {% endblock css %}
+
+{% block h1 %}Reservas{% endblock h1 %}
 {% block contenido %} 
-<main class="hero">
-  <div class="info-content">
-      <h1 class="content">Reservas</h1>
-  </div>
-</main>
+
 </div>
 
 <section class="section-padding">
@@ -60,7 +58,7 @@
 </section>
 <hr class="separador">
 {% endblock contenido %}
-         
+{% block js %}<script src="{% static '/jss/Reservas.js'%}"></script>{% endblock js %}      
    
 
  
