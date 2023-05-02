@@ -1,0 +1,86 @@
+{% extends './base.html' %}
+{% load static %}
+{% block titulo %}Contacto{% endblock  %}
+{% block css %}
+<link rel="stylesheet"  href="{% static '/publica/css/contacto.css'%}">
+{% endblock css %}
+    {% block contenido %}
+      <div class="contenedor2">
+        <div class="form">
+            <div class="contacto-info">
+                <h3 class="titulo">Ponete en contacto con nosotros</h3>
+                
+                <div class="info">
+                    <div class="informacion">
+                        <img src= "{% static '/icons/mapa.png'%}" class="icon" alt="icono de locacion" />
+                        <p>Buenos Aires, Argentina</p>
+                    </div>
+                    <div class="informacion">
+                        <img src="{% static '/icons/mail.png'%}" class="icon" alt="icono de un email" />
+                        <p>hotelesporteños@gmail.com</p>
+                    </div>
+                    <div class="informacion">
+                        <img src="{% static '/icons/tel.png'%}" class="icon" alt="icono de un telefono" />
+                        <p>5555-5555</p>
+                    </div>
+                </div>
+
+                <div class="redes2">
+                    <p>Encontranos en:</p>
+                    <div class="rsociales-iconos">
+                        <a href="#">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                
+                </div>
+            </div>    
+            <div class="contacto-form">
+                {% if mensaje %}
+                <div class="alert alert-success" role="alert"> 
+                    {{mensaje}}
+                </div>
+                {%endif%}
+                <form id="contac-form" name="contact-form"action={% url 'contacto' %} method='POST' novalidate>
+                    {% csrf_token %}
+                    <div>        
+                    <h3 class="titulo">Dejanos tu mensaje</h3>
+                {% for campo in contacto_form %}
+                <!--Grid column-->
+                <div class="col-md-12">
+                    <div class="md-form mb-0">
+                        <label for="name" class="form-label">{{ campo.label }}</label>
+                        {{campo}}
+                        {% comment %} 
+                        {% if campo.field.widget.input_type == 'checkbox' %}
+                            {{campo}} 
+                            <label for="name" class="">{{ campo.label }}</label>
+                        {% else %}
+                            <label for="name" class="">{{ campo.label }}</label>
+                            {{campo}}
+                        {% endif %} {% endcomment %}
+                    </div>
+                    <div >{{campo.errors}}</div>
+                </div>
+                <!--Grid column-->
+            {% endfor %}
+            <input type="submit" value="enviar" class="btn" />
+            </form>
+        </div>
+        </div>
+    </div>
+    {% endblock contenido %}
+    {% block js %} <script src="{% static '/jss/contacto.jss'%}"></script>{% endblock js %}  
+      
+
+    
+   

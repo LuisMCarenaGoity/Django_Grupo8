@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+     {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+   
+    <script src="https://kit.fontawesome.com/b87ec063d4.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+    <link rel="icon" href="{% static '/icons/logopeq.ico'%}">
+    <title>{% block titulo %}Home{% endblock titulo %} </title>
+    
+    
+     <link rel="stylesheet" href="{% static '/publica/css/index.css'%}?v={% now 'U' %}">
+    <link rel="stylesheet" href="{% static '/publica/css/mediaquerysindex.css'%}?v={% now 'U' %}">
+   {% block css%} {% endblock css %}
+    
+</head>
+
+<body>
+    
+    <div class="banner">
+        <header>
+            <nav class="navbar">
+                <a href="{% url 'inicio' %}" class="logo"><img src="{% static '/icons/Logo_hotel.png'%}" class="logo" alt="logo de hotel"></a>
+                <ul class="menu" id="menu">
+                    <li><a href= {% url 'reservas' %}>Reservas</a></li>
+                    <li><a href={% url 'servicios' %}>Servicios</a></li>
+                    <li><a href={% url 'nosotros' %}>Nosotros</a></li>
+                    <li><a href={% url 'galeria' %}>Galeria</a></li>
+                    <li><a href={% url 'contacto' %}>Contacto</a></li>
+                </ul>
+                <div class="menu-bar" id="menu-bar">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="user-icon">
+                    <a href={% url 'login' %}><i class="fa-solid fa-user"></i></a>
+                </div> 
+            </nav>
+        </header>
+    
+         <main >
+
+            <div class="hero">
+                <div class="info-content">
+                    <h1 class="contenth1">{% block h1 %}{% endblock h1 %}</h1>
+                    <br>
+                    <h3 class="contenth3">{% block p %}{% endblock p %}</h3>
+                        
+                </div>
+            </div>
+    
+            {% block contenido %}{% endblock contenido %}
+
+        </main>
+        <footer>
+            <div class="redes">
+                <p>Seguinos en nuestras Redes Sociales</p>
+                <div class="contenedor-iconos">
+                  <ul>
+                    <li><a href="#"><i class="fa-brands fa-square-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                  </ul>
+                </div>
+                <p>@Copyright 2022. Todos los derechos reservados</p>
+              </div>
+        </footer>
+    
+
+
+    {% block js %}<script src="{% static './jss/scripts.js'%}"></script>{% endblock js %}
+    
+</body>
+
+</html>

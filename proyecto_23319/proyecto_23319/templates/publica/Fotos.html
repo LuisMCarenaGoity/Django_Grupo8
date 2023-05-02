@@ -1,0 +1,199 @@
+{% extends './base.html' %}
+{% load static %}
+{% block titulo %}Galeria{% endblock  %}
+{% block css %}
+<link rel="stylesheet" href="{% static '/publica/css/index.css'%}?v={% now 'U' %}">
+<link rel="stylesheet"  href="{% static '/publica/css/PaginaFotos.css'%}">
+
+{% endblock css %}
+
+{% block h1 %}Galeria de fotos{% endblock h1 %}
+{% block contenido %} 
+</div>
+    <div class="contenedorpadre">
+        <div class="carrouseles">
+    
+            <div class="containerfotos">
+                <h2>Hotel</h2>
+                <ul class="slider">
+                    
+                <li id="slide1">
+                    <img src="{% static '/img/instalaciones/hotel foto 1.jpg'%}" alt=""/>
+                </li>
+                <li id="slide2">
+                    <img src="{% static '/img/instalaciones/hotel foto 2.jpg'%}" alt=""/>
+                </li>
+                <li id="slide3">
+                    <img src="{% static '/img/instalaciones/hotel foto 3.jpg'%}" alt="">
+                </li>
+                <li id="slide4">
+                    <img src="{% static '/img/instalaciones/hotel foto 4.jpg'%}" alt="">
+                </li>
+                <li id="slide5">
+                    <img src="{% static '/img/instalaciones/hotel foto 2.jpg'%}" alt="">
+                </li>
+
+                </ul>
+
+                <ul class="menuimg">
+                    <li>
+                        <a href="#slide1"></a>
+                    </li>
+                    <li>
+                        <a href="#slide2"></a>
+                    </li>
+                    <li>
+                        <a href="#slide3"></a>
+                    </li>
+                    <li>
+                        <a href="#slide4"></a>
+                    </li>
+                    <li>
+                        <a href="#slide5"></a>
+                    </li>
+                </ul>
+
+                <br><br><br>
+                <h2>Habitaciones</h2>
+                <ul class="slider">
+                    
+                <li id="slide6">
+                    <img src="{% static '/img/instalaciones/habitacion foto 1.jpg'%}" alt=""/>
+                </li>
+                <li id="slide7">
+                    <img src="{% static '/img/instalaciones/habitacion foto 2.jpg'%}" alt=""/>
+                </li>
+                <li id="slide8">
+                    <img src="{% static '/img/instalaciones/habitacion foto 3.jpg'%}" alt="">
+                </li>
+                <li id="slide9">
+                    <img src="{% static '/img/instalaciones/habitacion foto 4.jpg'%}" alt="">
+                </li>
+                <li id="slide10">
+                    <img src="{% static '/img/instalaciones/habitacion foto 5.jpg'%}" alt="">
+                </li>
+
+                </ul>
+
+                <ul class="menuimg">
+                    <li>
+                        <a href="#slide6"></a>
+                    </li>
+                    <li>
+                        <a href="#slide7"></a>
+                    </li>
+                    <li>
+                        <a href="#slide8"></a>
+                    </li>
+                    <li>
+                        <a href="#slide9"></a>
+                    </li>
+                    <li>
+                        <a href="#slide10"></a>
+                    </li>
+                </ul>
+
+                <br><br><br>
+                <h2>restaurante</h2>
+                <ul class="slider">
+                    
+                <li id="slide11">
+                    <img src="{% static '/img/instalaciones/restaurante hotel 3.jpg'%}" alt=""/>
+                </li>
+                <li id="slide12">
+                    <img src="{% static '/img/instalaciones/restaurante hotel.jpg'%}" alt=""/>
+                </li>
+                <li id="slide13">
+                    <img src="{% static '/img/instalaciones/restaurante hotel 2.jpg'%}" alt="">
+                </li>
+
+
+                </ul>
+
+                <ul class="menuimg">
+                    <li>
+                        <a href="#slide11"></a>
+                    </li>
+                    <li>
+                        <a href="#slide12"></a>
+                    </li>
+                    <li>
+                        <a href="#slide13"></a>
+                    </li>
+                    
+                </ul>
+                
+                <br><br><br>
+
+                <h2>Bar</h2>
+                <ul class="slider">
+                    
+                <li id="slide16">
+                    <img src="{% static '/img/instalaciones/bar hotel.jpg'%}" alt=""/>
+                </li>
+                <li id="slide17">
+                    <img src="{% static '/img/instalaciones/bar hotel 2.jpg'%}" alt=""/>
+                </li>
+                <li id="slide18">
+                    <img src="{% static '/img/instalaciones/bar hotel 3.jpg'%}" alt="">
+                </li>
+                
+
+                </ul>
+
+                <ul class="menuimg">
+                    <li>
+                        <a href="#slide16"></a>
+                    </li>
+                    <li>
+                        <a href="#slide17"></a>
+                    </li>
+                    <li>
+                        <a href="#slide18"></a>
+                    </li>
+                    
+                </ul>
+
+                <br><br><br>
+                <h2>Gimnasio y relax</h2>
+                <ul class="slider">
+                    
+                
+                <li id="slide21">
+                    <img src="{% static '/img/instalaciones/gimnasio hotel.jpg'%}" alt=""/>
+                </li>
+                <li id="slide22">
+                    <img src="{% static '/img/instalaciones/gimnasio hotel 2.jpg'%}" alt="">
+                </li>
+                <li id="slide23">
+                    <img src="{% static '/img/instalaciones/sauna hotel.jpg'%}" alt="">
+                </li>
+                <li id="slide24">
+                    <img src="{% static '/img/instalaciones/jacuzzi hotel.jpg'%}" alt="">
+                </li>
+
+                </ul>
+
+                    <ul class="menuimg">
+                    
+                    <li>
+                        <a href="#slide21"></a>
+                    </li>
+                    <li>
+                        <a href="#slide22"></a>
+                    </li>
+                    <li>
+                        <a href="#slide23"></a>
+                    </li>
+                    <li>
+                        <a href="#slide24"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    {% endblock contenido %}
+   {% block js %}<script src="./jss/scripts.js"></script>{% endblock js %}
+    
+</body>
+</html>
