@@ -153,3 +153,13 @@ body {
   overflow: hidden;
   margin-top: 25px;
 }
+.hero {
+  height: 20
+  vh;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(3,1fr);
+  text-align: center;
+  box-sizing: border-box;
+  grid-gap: 2em;
+}

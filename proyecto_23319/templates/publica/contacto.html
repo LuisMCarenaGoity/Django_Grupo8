@@ -45,32 +45,37 @@
                 </div>
             </div>    
             <div class="contacto-form">
-
-                <form action="contacto.html" autocomplete="off">
+                {% if mensaje %}
+                <div class="alert alert-success" role="alert"> 
+                    {{mensaje}}
+                </div>
+                {%endif%}
+                <form id="contac-form" name="contact-form"action={% url 'contacto' %} method='POST' novalidate>
+                    {% csrf_token %}
+                    <div>        
                     <h3 class="titulo">Dejanos tu mensaje</h3>
-                    <div class="input-contenedor">
-                        <input type="text" name="nombre" class="input" />
-                        <label for="">Nombre</label>
-                        <span>Nombre</span>
+                {% for campo in contacto_form %}
+                <!--Grid column-->
+                <div class="col-md-12">
+                    <div class="md-form mb-0">
+                        <label for="name" class="form-label">{{ campo.label }}</label>
+                        {{campo}}
+                        {% comment %} 
+                        {% if campo.field.widget.input_type == 'checkbox' %}
+                            {{campo}} 
+                            <label for="name" class="">{{ campo.label }}</label>
+                        {% else %}
+                            <label for="name" class="">{{ campo.label }}</label>
+                            {{campo}}
+                        {% endif %} {% endcomment %}
                     </div>
-                    <div class="input-contenedor">
-                        <input type="email" name="correo" class="input" />
-                        <label for="">Correo</label>
-                        <span>Correo</span>
-                    </div>
-                    <div class="input-contenedor">
-                        <input type="tel" name="telefono" class="input" />
-                        <label for="">Telefono</label>
-                        <span>Telefono</span>
-                    </div>
-                    <div class="input-contenedor textarea">
-                        <textarea name="mensaje" class="input"></textarea>
-                        <label for="">Tu mensaje</label>
-                        <span>Tu mensaje</span>
-                    </div>
-                    <input type="submit" value="enviar" class="btn" />
-                </form>
-            </div>
+                    <div >{{campo.errors}}</div>
+                </div>
+                <!--Grid column-->
+            {% endfor %}
+            <input type="submit" value="enviar" class="btn" />
+            </form>
+        </div>
         </div>
     </div>
     {% endblock contenido %}

@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from datetime import datetime
+from  publica.forms  import ContactoForm
 # Create your views here.
 
 def index(request):
@@ -12,7 +13,18 @@ def reservas(request):
     return render(request,'publica/Reservas.html',{})
 
 def contacto(request):
-    return render(request,'publica/contacto.html',{})
+    mensaje=" " 
+    if(request.method=="POST"):
+        contacto_form=ContactoForm(request.POST)
+        mensaje="hemos recibido tu mensaje"
+    else:
+        contacto_form=ContactoForm()
+
+    context={
+        'mensaje':mensaje,
+        'contacto_form': contacto_form,
+            }
+    return render(request,'publica/contacto.html',context)
 
 
 def crearcuenta(request):

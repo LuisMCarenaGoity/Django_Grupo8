@@ -1,19 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="./icons/Logo_hotel_porteño.ico">
-  <title>Login</title>
-  
-  <link rel="stylesheet" href="./css/login.css">
-</head>
+{% extends './base.html' %}
+{% load static %}
+{% block titulo %}Login{% endblock  %}
+{% block css %}
+<link rel="stylesheet"  href="{% static '/publica/css/login.css'%}">
+{% endblock css %}
+{% block h1 %}Bienvenido{% endblock h1 %}
+    {% block contenido %}
 <body>
   <section class="form-main">
     <div class="form-content">
       <div class="box">
-        <h3>Bienvenido</h3>
         <form action="">
           <div class="input-box">
             <input type="text" placeholder="Nombre de usuario" class="input-control">
@@ -21,15 +17,16 @@
           <div class="input-box">
             <input type="password" placeholder="password" class="input-control">
             <div class="input-link">
-              <a href="recuperarContrasena.html" class="gradient-text">¿Has olvidado tu contraseña?</a>
+              <a href={% url 'recuperarcuenta' %} class="gradient-text">¿Has olvidado tu contraseña?</a>
             </div>
           </div>
           <button type="submit" class="btn">Iniciar Sesión</button>
         </form>
-        <p>¿No tienes cuenta?<a href="crearCuenta.html" class="gradient-text">Crear una Cuenta</a></p>
+        <p>¿No tienes cuenta?<a href={% url 'crearcuenta' %} class="gradient-text">Crear una Cuenta</a></p>
        </div>
-       <a href="index.html" class="index"><button type="submit" class="btn-index">Volver a Home</button></a>
+      
     </div>
   </section>
 </body>
 </html>
+{% endblock contenido %}

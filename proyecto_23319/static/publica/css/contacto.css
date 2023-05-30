@@ -1,3 +1,7 @@
+.hero{
+    display: none;
+    height: 0%;
+}
 .contenedor2 {
     position: static;
     width: 100%;

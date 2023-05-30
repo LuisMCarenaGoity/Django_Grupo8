@@ -8,7 +8,7 @@
        {% block contenido %}
         <div class="contenedor-boton">
             <button class="btn">
-                <a href="Reservas.html">Ver tarifas</a>
+                <a href={% url 'reservas' %}>Ver tarifas</a>
             </button>
         </div>
         <Section class="Contenidopagina">
@@ -19,7 +19,7 @@
                         <h2 class="h2imagen">Habitaciones</h2>
                         <br>
                         <p class="parrafo1">Nuestras habitaciones están diseñadas para que usted disfrute de las mayores comodidades, encontrándose en ellas las mejores vistas y…</p>
-                        <a href="#" class="boton1">Ver mas</a>
+                        <a href={% url 'galeria' %} class="boton1">Ver mas</a>
                     </div>
                 </article>
                 <article class="images-content2">
@@ -28,7 +28,7 @@
                         <h2 class="h2imagen">Servicios</h2>
                         <br>
                         <p class="parrafo1">El Hotel Dos Reyes cuenta con todo lo necesario para vivir una experiencia única. Desayuno buffet, almuerzos/cenas gourmet …</p>
-                        <a href="Servicios.html" class="boton1">Ver mas</a>
+                        <a href={% url 'servicios' %} class="boton1">Ver mas</a>
                     </div>
                 </article>
             </div>
